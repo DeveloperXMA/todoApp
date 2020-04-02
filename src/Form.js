@@ -23,15 +23,9 @@ export default class addTodo extends React.Component {
   }
 
   componentDidMount() {
-    // const todos = localStorage.getItem('todos');
-    // console.log(todos)
-    // if (todos !== null && todos.length > 0) {
-    //   this.setState({
-    //     todos
-    //   })
-    // }
+    
     let localTodos = JSON.parse(localStorage.getItem('todos'));
-    if (localTodos !== null || localTodos.length > 0) {
+    if (localTodos !== null && localTodos.length > 0) {
       this.setState({
         todos: localTodos
       })
